@@ -39,7 +39,10 @@ inquirer
 	choices: function() {
 	            var choiceArray = [];
 	            for (var i = 0; i < results.length; i++) {
-	              choiceArray.push(results[i].product_name);
+
+                var productInfo = results[i].product_name + ": $" + results[i].price;
+
+	              choiceArray.push(productInfo);
 	            }
 	            return choiceArray;
           },
